@@ -15,3 +15,57 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+
+@theme {
+  --color-grey: #999999;
+  --color-blue: #468cc8;
+  --color-dark-blue: #40586d;
+  --color-lighter-grey: #eceeef;
+  --color-light-grey: #d9d9d9;
+  --color-dark-grey: #9a9a9a;
+  --color-background-grey: #f5f5f5;
+  --color-border: #e0e0e0;
+}
+
+
+.openrent-logo .top-spin {
+  mask: url(#top-spin-mask);
+}
+.openrent-logo .top-spin-mask-group {
+  filter: url(#top-spin-luminosity-noclip);
+}
+.openrent-logo .top-spin-mask-rect {
+  fill: url(#bottom-spin-gradient);
+}
+.openrent-logo .bottom-spin {
+  mask: url(#bottom-spin-mask);
+}
+.openrent-logo .bottom-spin-mask-group {
+  filter: url(#bottom-spin-luminosity-noclip);
+}
+.openrent-logo .bottom-spin-mask-rect {
+  fill: url(#top-spin-gradient);
+}
+
+.openrent-logo .spinner-parent {
+  transform-box: fill-box;
+  transform-origin: center;
+  -webkit-transition: transform .5s ease-in-out;
+  -o-transition: transform .5s ease-in-out;
+  -moz-transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(.1,.1,.1);
+  overflow: visible;
+  -webkit-transform-style: preserve-3d;
+}
+
+.openrent-logo:hover .spinner-parent {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.openrent-logo .svg-logo {
+  fill: var(--color-grey);
+}
