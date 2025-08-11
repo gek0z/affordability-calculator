@@ -33,6 +33,7 @@ pnpm run dev
 ```
 Open `http://localhost:5173` in your browser.
 
+### Testing
 ```bash
 # Watch mode
 npm test
